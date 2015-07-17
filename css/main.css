@@ -125,10 +125,10 @@ body {}
 .jumbotron {
     font-family: sans-serif;
 }
-
 /*
 do a highlight gradient on tname
 */
+
 .jumbotron #name {
     font-size: 100px;
     position: absolute;
@@ -144,7 +144,6 @@ do a highlight gradient on tname
 }
 
 .gradient {}
-
 
 .rotate {
     -webkit-transform: rotate(-90deg);
