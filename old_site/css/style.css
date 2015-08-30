@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Homepage Style Sheet
+   ========================================================================== */
+
+main {
+    padding: 0;
+    border: 0;
+}
+
+main div.image {
+    background-image: url("../images/background_flipped.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    padding-top: 34.9%;
+    top: 45px;
+}
+
+main div.image #slogan-1 {
+    color: deepskyblue;
+}
+
+main div.image #slogan-1 span {
+    font-size: 9vmax;
+}
+/* slogan-1 Art */
+
+main div.image #slogan-1 #first-word {
+    position: relative;
+    right: 7vw;
+    top: -34vw;
+    -webkit-transform: rotate(-100deg);
+    -moz-transform: rotate(-100deg);
+    transform: rotate(-100deg);
+}
+
+main div.image #slogan-1 #second-word {
+    position: relative;
+    right: 5vw;
+    top: -57vw;
+    -webkit-transform: rotate(-95deg);
+    -moz-transform: rotate(-95deg);
+    transform: rotate(-95deg);
+}
+
+main div.image #slogan-1 #third-word {
+    position: relative;
+    right: 2.5vw;
+    top: -68vw;
+    -webkit-transform: rotate(-92deg);
+    -moz-transform: rotate(-92deg);
+    transform: rotate(-92deg);
+}
+
+main div.image #slogan-1 #fourth-word {
+    position: relative;
+    width: 20vw;
+    right: -44.3vw;
+    top: -31vw;
+    -webkit-transform: rotateY(10deg);
+    -moz-transform: rotateY(10deg);
+    transform: rotateY(15deg);
+}
+/* Inidividual Letters */
+
+main div.image #slogan-1 #first-word span:nth-of-type(1) {
+    font-size: 5vw;
+}
+
+main div.image #slogan-1 #first-word span:nth-of-type(2) {
+    font-size: 4.5vw;
+}
+
+main div.image #slogan-1 #first-word span:nth-of-type(3) {
+    font-size: 4.2vw;
+}
+
+main div.image #slogan-1 #first-word span:nth-of-type(4) {
+    font-size: 4vw;
+}
+
+main div.image #slogan-1 #first-word span:nth-of-type(5) {
+    font-size: 3.8vw;
+}
+
+main div.image #slogan-1 #first-word span:nth-of-type(6) {
+    font-size: 3.6vw;
+}
+
+main div.image #slogan-1 #second-word span:nth-of-type(1) {
+    font-size: 3.5vw;
+}
+
+main div.image #slogan-1 #second-word span:nth-of-type(2) {
+    font-size: 3.4vw;
+}
+
+main div.image #slogan-1 #third-word span:nth-of-type(1) {
+    font-size: 3.3vw;
+}
+
+main div.image #slogan-1 #third-word span:nth-of-type(2) {
+    font-size: 3.2vw;
+}
+
+main div.image #slogan-1 #fourth-word span:nth-of-type(1) {
+    font-size: 3.6vw;
+}
+
+main div.image #slogan-1 #fourth-word span:nth-of-type(2) {
+    font-size: 3.6vw;
+}
+
+main div.image #slogan-1 #fourth-word span:nth-of-type(3) {
+    font-size: 3.6vw;
+}
+
+main div.image #slogan-1 #fourth-word span:nth-of-type(4) {
+    font-size: 3.6vw;
+}
+
+main div.image #name {
+    font-size: 7.5vmin;
+    position: absolute;
+    right: 1.5vw;
+    top: 0.5vw;
+    z-index: 1;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(128, 15, 101, 0.2) 80%, rgba(128, 15, 101, 0) 100%);
+    /* ff3.6+ */
+
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(230, 216, 205), color-stop(95%, rgba(128, 15, 101, 0.9))));
+    /* safari4+,chrome */
+
+    background: -webkit-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* safari5.1+,chrome10+ */
+
+    background: -o-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* opera 11.10+ */
+
+    background: -ms-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* ie10+ */
+
+    background: radial-gradient(ellipse at center, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* w3c */
+
+    background-clip: text;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#800F65', GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* ie6-9 */
+}
+
+.jumbotron {
+    font-family: sans-serif;
+}
+
+.rotate {
+    -webkit-transform: rotate(-100deg);
+    -moz-transform: rotate(-100deg);
+    transform: rotate(-100deg);
+}
+
+.flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+@media (min-width: 2310px) {
+    main div.image {
+        top: auto;
+        bottom: 0;
+    }
+    main div.image #name {
+        top: 200px;
+    }
+}
+
+@media (max-width: 767px) {
+    #nav li {
+        display: block;
+        width: 100%;
+    }
+    main div.image {
+        top: 250px;
+    }
+}

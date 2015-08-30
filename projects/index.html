@@ -1,103 +1,219 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title></title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700|Merriweather:400italic,400' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Resource style -->
+    <script src="/js/modernizr.js"></script>
+    <!-- Modernizr -->
+
+    <title>Projects Gallery | CodyHouse</title>
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <p class="center" id="disclaimer">Due to limited server capabilities, any or all of these hosted projects may be down. If this is the case, please <a href="/contact/">contact me</a> and I will get them back up right away.</p>
+    <div class="projects-container">
+        <ul>
+            <li class="cd-single-project">
+                <div class="cd-title">
+                    <h2>Maps and Traffic</h2>
+                    <p>A Naive Implementation of Google Maps</p>
+                </div>
+                <!-- .cd-title -->
 
-    <div id="wrapper">
+                <div class="cd-project-info">
+                    <p>The final pair project for "CS032: Intro to Software Engineering", we were required to amalgamate our first three projects to create an interactive map GUI which met the following specifications:</p>
+                    <ul>
+                        <li>
+                            A bird’s eye view of the streets that can be zoomed and panned using mouse scrolling/dragging
+                        </li>
+                        <li>
+                            Some way to input intersections by typing in the names of streets using autocompletion
+                        </li>
+                        <li>
+                            Clicking on the map to input the nearest intersection/point
+                        </li>
+                        <li>
+                            Displaying the shortest path by highlighting the relevant street segments on the map screen
+                        </li>
+                        <li>
+                            Some way to clear the shortest path
+                        </li>
+                        <li>
+                            A starting location on Brown's campus
+                        </li>
+                        <li>
+                            Update map with traffic information in real time by coloring ways with traffic data using your coloring scheme
+                        </li>
+                        <li>
+                            Update A* search to account for traffic levels by scaling the weight of an edge by its traffic
+                        </li>
+                    </ul>
 
-        <header>
-            <nav>
-                <a href="/about-me/">
-                    <li class="item1">
-                        About Me
-                    </li>
-                </a>
-                <a href="/experience/">
-                    <li class="item2">
-                        Experience
-                    </li>
-                </a>
-                <a href="/projects/">
-                    <li class="item3">
-                        Projects
-                    </li>
-                </a>
-                <a href="/pictures/">
-                    <li class="item4">
-                        Pictures
-                    </li>
-                </a>
-                <a href="/holder/">
-                    <li class="item5">
-                        Holder
-                    </li>
-                </a>
-            </nav>
-        </header>
-        <!-- #header -->
-        <footer>
-            <ul id="social-icons">
-                <li>
-                    <a href="http://github.com/steven200796"><img src="/images/buttons/github_round.png" width="48" height="48" alt="GitHub" />
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.linkedin.com/in/steven200796"><img src="/images/buttons/linkedin_round.png" width="48" height="48" alt="LinkedIn" />
-                    </a>
-                </li>
-                <li>
-                    <a href="http://www.facebook.com/steven200796"><img src="/images/buttons/facebook_round.png" width="48" height="48" alt="Facebook" />
-                    </a>
-                </li>
-            </ul>
-        </footer>
-        <!-- #footer -->
-        <!-- Add your site or application content here -->
+                    <p>My partner and I split the work into frontend and backend; I implemented the backend in its entirety with the following features:</p>
 
+                    <ul>
+                        <li>
+                            Extensive processing and efficient querying of large data (database of graph of Rhode Island)
+                        </li>
+                        <li>
+                            A* search with latitudes and longitudes while accounting for curvature of the Earth
+                        </li>
+                        <li>
+                            KD-Searching for nearest neighbor to a clicked point
+                        </li>
+                        <li>
+                            Trie backed suggestions engine with smart ranking supporting whitespace edit, prefix matching, and levenshtein edit distances
+                        </li>
+                        <li>
+                            Effective networking communications through efficient data structures and batching requests
+                        </li>
+                        <li>
+                            Threaded the entire backend using and/or creating thread-safe data structures
+                        </li>
+                    </ul>
+                    <p>Unfortunately, the repo cannot be made publicly available due to class policies. Please feel free to <a href="/contact/">contact me</a> and I will gladly share the repo with your organization. Buuuuuut if you'd like to try it out, I have it hosted in the link below! The performance will be slow due to a low quality server (which is why it's served over HTTP). Please just refresh the page if it freezes.
+                    </p>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>
-            window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')
-        </script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+                    <a href="/projects/maps/" class="project-link" id="maps-link">Check Out Maps</a>
+                    <br>
+                </div>
+                <!-- .cd-project-info -->
+            </li>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function (b, o, i, l, e, r) {
-                b.GoogleAnalyticsObject = l;
-                b[l] || (b[l] =
-                    function () {
-                        (b[l].q = b[l].q || []).push(arguments)
-                    });
-                b[l].l = +new Date;
-                e = o.createElement(i);
-                r = o.getElementsByTagName(i)[0];
-                e.src = 'https://www.google-analytics.com/analytics.js';
-                r.parentNode.insertBefore(e, r)
-            }(window, document, 'script', 'ga'));
-            ga('create', 'UA-XXXXX-X', 'auto');
-            ga('send', 'pageview');
-        </script>
+            <li class="cd-single-project">
+                <div class="cd-title">
+                    <h2>Brewer</h2>
+                    <p>Scratch Inspired Block Programming for Java</p>
+                </div>
+                <!-- .cd-title -->
+
+                <div class="cd-project-info">
+                    <p>
+                        The final group project for "CS032: Intro to Software Engineering", our group of four collaborated and pitched the idea of a Java version of Scratch. United in our love for coffee and the Java programming language, we decided to name the project "Brewer".
+                    </p>
+                    <p>
+                        Once again, the project was broken up between frontend and backend. Raphael and I worked on the backend while Noah and Ben worked on the frontend. I personally contributed the following:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Helped implement program parsing and type checking
+                        </li>
+                        <li>
+                            Created database communications for program storage and loading
+                        </li>
+                        <li>
+                            Wrote the entire test suite for network communications and program evaluations
+                        </li>
+                    </ul>
+                    <br>
+                    <p>Currently, Ben has the public repo on GitHub:&nbsp<a href="https://github.com/benjaminmurphy/CS32Brewer" class="repo-link">https://github.com/benjaminmurphy/CS32Brewer</a>
+                    </p>
+                    <br>
+                    <p>Build something simple, or Skynet (challenge accepted?). Save your program, reload it. Don't forget to hit the kill button if you find your program in an infinite loop (unfortunately, we were unable to solve the
+                        <a href="https://en.wikipedia.org/wiki/Halting_problem">Halting Problem</a> in time for the project deadline).</p>
+                    <p class="center">If you want to get Brewing, check out the link below!</p>
+                    <br>
+                    <a href="/projects/brewer/" class="project-link" id="brewer-link">Brew Some Code</a>
+
+                </div>
+                <!-- .cd-project-info -->
+            </li>
+
+            <li class="cd-single-project">
+                <div class="cd-title">
+                    <h2>My Website</h2>
+                    <p>Full Stack LAMP Site</p>
+                    <p>Ongoing Project</p>
+                </div>
+                <!-- .cd-title -->
+
+                <div class="cd-project-info">
+                    <p>
+                        This is a digital home I'm building for myself within the Internet Of Things. Currently, it is being born as a two week project that I'm starting in my two weeks before school. I hope to continually progress it as time passes and forge it into a digital hub that I can truly be proud of.
+                    </p>
+                    <br>
+                    <p>
+                        Before building this site, I had minimal exposure and knowledge of the following:
+                    </p>
+                    <ul>
+                        <li>HTML/CSS</li>
+                        <li>Responsive Design</li>
+                        <li>Interactive Design</li>
+                        <li>Javascript/AJAX/jQuery</li>
+                        <li>General Networking (Proxies, Firewalls, Hostnames, etc.)</li>
+                        <li>Basic Bash Scripting</li>
+                        <li>Bash Scripting Task Automation</li>
+                        <li>Linux</li>
+                        <li>Apache</li>
+                        <li>SSL Protocol</li>
+                    </ul>
+                    <br>
+                    <p>
+                        Due to this project, I am now fairly proficient in the above; I will continue building this site and look forward to incoporating the following in hopes of achieving proficiency in such topics:
+                    </p>
+                    <ul>
+                        <li>Network Security and Penetration Testing</li>
+                        <li>Scalable Databases and Storage</li>
+                        <li>Website Scalability and Automation</li>
+                        <li>PHP</li>
+                        <li>Ruby on Rails</li>
+                        <li>Machine Learning</li>
+                        <li>Beautiful HTML/CSS/JS/PHP Code (half joking, 4/5's serious)</li>
+                    </ul>
+                    <br>
+                    <p>As you can see, I hope to continually move topics from the second list to the first list while steadily adding to the second list. In such a sense, this will be a dynamic page of results, reflecting my experience and learning from creating this site.</p>
+                    <p>On the off chance that you're actually visiting this distinct page and not my actual site, I highly encourage you to check out my site with the link below...heck, even if you're on my site click the link and explore it again :). Thanks for checking out what you have thus far.</p>
+                    <br>
+                    <a href="http://www.stevenshi.me" class="project-link" id="my-site">My Digital Home</a>
+                    <br>
+                    <p>I would like to apologize real quick if any of my projects freeze or are unresponsive. This is primarily due to the server limitations in place.</p>
+                    <br>
+                    <p>Credits and Thanks List for Awesome Resources and Help</p>
+                    <ul>
+                        <li>
+                            Apache Community - users@httpd.apache.org
+                        </li>
+                        <li>
+                            <a href="http://codyhouse.co">CodyHouse</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- .cd-project-info -->
+            </li>
+
+            <li class="cd-single-project">
+                <div class="cd-title">
+                    <h2>Next Project</h2>
+                    <p>To Be Announced</p>
+                </div>
+                <!-- .cd-title -->
+
+                <div class="cd-project-info">
+                    <p>I think generated latin text is sweet so I'm keeping this here.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quod dicta aliquid nemo repellendus distinctio minus dolor aperiam suscipit, ea enim accusantium, deleniti qui sequi sint nihil modi amet eligendi, quidem animi error labore voluptatibus sed. Qui magnam labore, iusto nostrum. Praesentium non, impedit accusantium consequatur officia architecto, mollitia placeat aperiam tenetur pariatur voluptatibus corrupti vitae deserunt! Nostrum non mollitia deserunt ipsam. Sunt quaerat natus cupiditate iure ipsa voluptatibus recusandae ratione vitae amet distinctio, voluptas, minus vero expedita ea fugit similique sit cumque ad id facere? Ab quas, odio neque quis ratione. Natus labore sit esse, porro placeat eum hic.
+                    </p>
+                </div>
+                <!-- .cd-project-info -->
+            </li>
+        </ul>
+        <a href="#0" class="cd-close">Close</a>
+        <a href="#0" class="cd-scroll">Scroll</a>
     </div>
+    <!-- .project-container -->
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Resource jQuery -->
 </body>
 
 </html>
