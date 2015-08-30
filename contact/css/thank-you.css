@@ -1,0 +1,21 @@
+
+main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/backgrounds/contact.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+#thank-you {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 10%;
+    font-size: 30px;
+    line-height: 2;
+    text-align: center;
+    color: red;
+    font-family: 'Share Tech', sans-serif;
+}

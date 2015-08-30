@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="/css/main.css">
+    <!-- Resource style -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Page Style -->
+    <script src="/js/modernizr.js"></script>
+    <!-- Modernizr -->
+
+    <title>Contact Me</title>
+</head>
+
+<body>
+    <nav class="cd-3d-nav-container">
+        <ul class="cd-3d-nav">
+            <li>
+                <a href="/about-me/" class="trigger">About Me</a>
+            </li>
+
+            <li>
+                <a href="/experience/" class="trigger">Experience</a>
+            </li>
+
+            <li>
+                <a href="/projects/" class="trigger">Projects</a>
+            </li>
+
+            <li>
+                <a href="/resume/" class="trigger">Resume</a>
+            </li>
+            <li>
+                <a href="/contact/" class="trigger">Contact</a>
+            </li>
+        </ul>
+        <!-- .cd-3d-nav -->
+
+        <span class="cd-marker color-1"></span>
+    </nav>
+    <!-- .cd-3d-nav-container -->
+
+
+    <header class="cd-header">
+        <a href="#" class="cd-logo"><img src="/img/cd-logo.svg" alt="Logo">
+        </a>
+        <a href="#" class="cd-3d-nav-trigger">
+            Menu
+            <span></span>
+        </a>
+    </header>
+    <!-- .cd-header -->
+
+    <main>
+        <form class="cd-form floating-labels" action="contact-form-handler.php" method="post">
+            <fieldset>
+                <legend>> touch contact_form.txt
+                    <br> > vim contact_form.txt
+                </legend>
+                <div class="error-message" hidden>
+                    <p>Please enter a valid email address</p>
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-name">> echo $NAME</label>
+                    <input class="user" type="text" name="cd-name" id="cd-name" required>
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-company">> echo $COMPANY</label>
+                    <input class="company" type="text" name="cd-company" id="cd-company">
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-email">> echo $EMAIL</label>
+                    <input class="email" type="email" name="cd-email" id="cd-email" required>
+                </div>
+
+                <!--
+                <div>
+                    <h4>Budget</h4>
+                    <p class="cd-select icon">
+                        <select class="budget">
+                            <option value="0">Select Budget</option>
+                            <option value="1">&lt; $5000</option>
+                            <option value="2">$5000 - $10000</option>
+                            <option value="3">&gt; $10000</option>
+                        </select>
+                    </p>
+                </div>
+
+                <div>
+                    <h4>Project type</h4>
+
+                    <ul class="cd-form-list">
+                        <li>
+                            <input type="radio" name="radio-button" id="cd-radio-1" checked>
+                            <label for="cd-radio-1">Choice 1</label>
+                        </li>
+
+                        <li>
+                            <input type="radio" name="radio-button" id="cd-radio-2">
+                            <label for="cd-radio-2">Choice 2</label>
+                        </li>
+
+                        <li>
+                            <input type="radio" name="radio-button" id="cd-radio-3">
+                            <label for="cd-radio-3">Choice 3</label>
+                        </li>
+                    </ul>
+                </div>
+                -->
+
+                <div>
+                    <h4>--$CONTACT_REASONS</h4>
+
+                    <ul class="cd-form-list">
+                        <li>
+                            <input type="checkbox" id="cd-checkbox-1" name="contactReasons[]" value="Personal">
+                            <label for="cd-checkbox-1">Personal</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="cd-checkbox-2" name="contactReasons[]" value="Business">
+                            <label for="cd-checkbox-2">Business</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="cd-checkbox-3" name="contactReasons[]" value="Feedback">
+                            <label for="cd-checkbox-3">Website Feedback</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="cd-checkbox-4" name="contactReasons[]" value="Questions">
+                            <label for="cd-checkbox-4">Questions</label>
+                        </li>
+
+                        <li>
+                            <input type="checkbox" id="cd-checkbox-5" name="contactReasons[]" value="Help">
+                            <label for="cd-checkbox-5">--help</label>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="icon">
+                    <label class="cd-label" for="cd-textarea">> echo $CLASSIFIED_MESSAGE</label>
+                    <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+                </div>
+
+                <div>
+                    <input type="submit" value="./send contact_form.txt --$CONTACT_REASONS">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <ul id="social-icons">
+            <li>
+                <a href="http://github.com/steven200796"><img src="/images/buttons/github_round.png" width="48" height="48" alt="GitHub" />
+                </a>
+            </li>
+            <li>
+                <a href="http://www.linkedin.com/in/steven200796"><img src="/images/buttons/linkedin_round.png" width="48" height="48" alt="LinkedIn" />
+                </a>
+            </li>
+            <li>
+                <a href="http://www.facebook.com/steven200796"><img src="/images/buttons/facebook_round.png" width="48" height="48" alt="Facebook" />
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <!-- #footer -->
+
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/main.js"></script>
+    <!-- Global .js Scripts -->
+    <script src="js/main.js"></script>
+    <!-- Local .js Scripts -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = 'https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>
