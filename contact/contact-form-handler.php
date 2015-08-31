@@ -31,11 +31,14 @@ if(isset($_POST["cd-email"])) {
     }
 
     $mailBody="Name: $sender\nEmail: $senderEmail\n Reasons: $reasons\n\n$message";
-
-    mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>");
-    
-    debug( "pass3" );
-    header('Location: contact-form-thank-you.html');}
-    die();
-    debug( "pass4" );
+    if (mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>")) {
+            header('Location: contact-form-thank-you.html');
+            echo '<p>Your message has been sent!</p>';
+            debug( "pass3" );
+        } else {
+            echo '<p>Something went wrong, go back and try again!</p>';
+        }
+    }
+die();
+debug( "pass4" );
 ?>
