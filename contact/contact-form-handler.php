@@ -12,7 +12,7 @@ function debug( $data ) {
 }
 
 if(isset($_POST["cd-email"])) {
-    $recipient="steven@stevenshi.me";
+    $recipient="diyang_shi@brown.edu";
     $subject="You have received a new message from your site.";
     $sender=$_POST["cd-name"];
     $senderEmail=$_POST["cd-email"];
@@ -32,13 +32,12 @@ if(isset($_POST["cd-email"])) {
 
     $mailBody="Name: $sender\nEmail: $senderEmail\n Reasons: $reasons\n\n$message";
     if (mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>")) {
-            header('Location: contact-form-thank-you.html');
+            header('Location: thank-you.html');
             echo '<p>Your message has been sent!</p>';
             debug( "pass3" );
         } else {
             echo '<p>Something went wrong, go back and try again!</p>';
         }
     }
-die();
 debug( "pass4" );
 ?>
