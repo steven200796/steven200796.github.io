@@ -12,6 +12,8 @@
     <!-- Page Style -->
     <script src="/js/modernizr.js"></script>
     <!-- Modernizr -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Captcha Skynet Detection -->
 
     <title>Contact Me</title>
 </head>
@@ -149,6 +151,10 @@
                 <div class="icon">
                     <label class="cd-label" for="cd-textarea">> echo $CLASSIFIED_MESSAGE</label>
                     <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+                </div>
+                <div id="captcha-container">
+                    <div class="g-recaptcha" id="captcha-small" data-theme="dark" data-sitekey="6LdiEQwTAAAAAKL5JQ9-H5YCofPf19uzuh-bMHeJ" data-size="compact"></div>
+                    <div class="g-recaptcha" id="captcha-regular" data-theme="dark" data-sitekey="6LdiEQwTAAAAAKL5JQ9-H5YCofPf19uzuh-bMHeJ"></div>
                 </div>
 
                 <div>

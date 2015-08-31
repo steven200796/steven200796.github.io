@@ -1,15 +1,13 @@
 jQuery(document).ready(function ($) {
-
-    initSelectedNav();
     $("body").css("display", "none");
 
-    $("body").fadeIn(2000);
-
+    $("body").fadeIn(1500);
+    initSelectedNav();
     $("a.trigger").click(function (event) {
         event.preventDefault();
         linkLocation = $(this).attr("href");;
         console.log(linkLocation);
-        $("body").fadeOut(2000, redirectPage);
+        $("body").fadeOut(1500, redirectPage);
     });
 
     function redirectPage() {
