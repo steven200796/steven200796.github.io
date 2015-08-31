@@ -30,8 +30,8 @@ if(isset($_POST["cd-email"])) {
         }
     }
 
-    $mailBody="Name: $sender\nEmail: $senderEmail\n Reasons: $reasons\n\n$message";
-    if (mail($recipient, $subject, $mailBody, "From: $sender <$senderEmail>")) {
+    $mailBody="Name: $sender\nEmail: $senderEmail\nReasons: $reasons\n\nMessage:$message";
+    if (mail($recipient, $subject, $mailBody, "From: Site Contact <admin@stevenshi.me>")) {
             header('Location: thank-you.html');
             echo '<p>Your message has been sent!</p>';
             debug( "pass3" );
