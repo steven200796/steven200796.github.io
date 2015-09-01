@@ -59,14 +59,6 @@ body {
         opacity: 1;
     }
 }
-
-a {
-    text-decoration: none;
-}
-
-a.cd-3d-nav-trigger:hover {
-    cursor: pointer
-}
 /*
 ::-webkit-scrollbar {
     display: none;
@@ -81,6 +73,11 @@ a.cd-3d-nav-trigger:hover {
 Main Components
 
 -------------------------------- */
+/* Header */
+
+a.cd-3d-nav-trigger:hover {
+    cursor: pointer
+}
 
 .cd-header {
     position: fixed;
