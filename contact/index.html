@@ -12,7 +12,7 @@
     <!-- Page Style -->
     <script src="/js/modernizr.js"></script>
     <!-- Modernizr -->
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Captcha Skynet Detection -->
 
     <title>Contact Me</title>
@@ -56,33 +56,33 @@
         </a>
     </header>
     <!-- .cd-header -->
+    <div id="content">
+        <main>
+            <form class="cd-form floating-labels" action="contact-form-handler.php" method="post">
+                <fieldset>
+                    <legend>> touch contact_form.txt
+                        <br> > vim contact_form.txt
+                    </legend>
+                    <div class="error-message" hidden>
+                        <p>Please enter a valid email address</p>
+                    </div>
 
-    <main>
-        <form class="cd-form floating-labels" action="contact-form-handler.php" method="post">
-            <fieldset>
-                <legend>> touch contact_form.txt
-                    <br> > vim contact_form.txt
-                </legend>
-                <div class="error-message" hidden>
-                    <p>Please enter a valid email address</p>
-                </div>
+                    <div class="icon">
+                        <label class="cd-label" for="cd-name">> echo $NAME</label>
+                        <input class="user" type="text" name="cd-name" id="cd-name" required>
+                    </div>
 
-                <div class="icon">
-                    <label class="cd-label" for="cd-name">> echo $NAME</label>
-                    <input class="user" type="text" name="cd-name" id="cd-name" required>
-                </div>
+                    <div class="icon">
+                        <label class="cd-label" for="cd-company">> echo $COMPANY</label>
+                        <input class="company" type="text" name="cd-company" id="cd-company">
+                    </div>
 
-                <div class="icon">
-                    <label class="cd-label" for="cd-company">> echo $COMPANY</label>
-                    <input class="company" type="text" name="cd-company" id="cd-company">
-                </div>
+                    <div class="icon">
+                        <label class="cd-label" for="cd-email">> echo $EMAIL</label>
+                        <input class="email" type="email" name="cd-email" id="cd-email" required>
+                    </div>
 
-                <div class="icon">
-                    <label class="cd-label" for="cd-email">> echo $EMAIL</label>
-                    <input class="email" type="email" name="cd-email" id="cd-email" required>
-                </div>
-
-                <!--
+                    <!--
                 <div>
                     <h4>Budget</h4>
                     <p class="cd-select icon">
@@ -117,52 +117,54 @@
                 </div>
                 -->
 
-                <div>
-                    <h4>--$CONTACT_REASONS</h4>
+                    <div>
+                        <h4>--$CONTACT_REASONS</h4>
 
-                    <ul class="cd-form-list">
-                        <li>
-                            <input type="checkbox" id="cd-checkbox-1" name="contactReasons[]" value="Personal">
-                            <label for="cd-checkbox-1">Personal</label>
-                        </li>
+                        <ul class="cd-form-list">
+                            <li>
+                                <input type="checkbox" id="cd-checkbox-1" name="contactReasons[]" value="Personal">
+                                <label for="cd-checkbox-1">Personal</label>
+                            </li>
 
-                        <li>
-                            <input type="checkbox" id="cd-checkbox-2" name="contactReasons[]" value="Business">
-                            <label for="cd-checkbox-2">Business</label>
-                        </li>
+                            <li>
+                                <input type="checkbox" id="cd-checkbox-2" name="contactReasons[]" value="Business">
+                                <label for="cd-checkbox-2">Business</label>
+                            </li>
 
-                        <li>
-                            <input type="checkbox" id="cd-checkbox-3" name="contactReasons[]" value="Feedback">
-                            <label for="cd-checkbox-3">Website Feedback</label>
-                        </li>
+                            <li>
+                                <input type="checkbox" id="cd-checkbox-3" name="contactReasons[]" value="Feedback">
+                                <label for="cd-checkbox-3">Website Feedback</label>
+                            </li>
 
-                        <li>
-                            <input type="checkbox" id="cd-checkbox-4" name="contactReasons[]" value="Questions">
-                            <label for="cd-checkbox-4">Questions</label>
-                        </li>
+                            <li>
+                                <input type="checkbox" id="cd-checkbox-4" name="contactReasons[]" value="Questions">
+                                <label for="cd-checkbox-4">Questions</label>
+                            </li>
 
-                        <li>
-                            <input type="checkbox" id="cd-checkbox-5" name="contactReasons[]" value="Help">
-                            <label for="cd-checkbox-5">--help</label>
-                        </li>
-                    </ul>
-                </div>
+                            <li>
+                                <input type="checkbox" id="cd-checkbox-5" name="contactReasons[]" value="Help">
+                                <label for="cd-checkbox-5">--help</label>
+                            </li>
+                        </ul>
+                    </div>
 
-                <div class="icon">
-                    <label class="cd-label" for="cd-textarea">> echo $CLASSIFIED_MESSAGE</label>
-                    <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
-                </div>
-                <div id="captcha-container">
-                    <div class="g-recaptcha" id="captcha-small" data-theme="dark" data-sitekey="6LdiEQwTAAAAAKL5JQ9-H5YCofPf19uzuh-bMHeJ" data-size="compact"></div>
-                    <div class="g-recaptcha" id="captcha-regular" data-theme="dark" data-sitekey="6LdiEQwTAAAAAKL5JQ9-H5YCofPf19uzuh-bMHeJ"></div>
-                </div>
+                    <div class="icon">
+                        <label class="cd-label" for="cd-textarea">> echo $CLASSIFIED_MESSAGE</label>
+                        <textarea class="message" name="cd-textarea" id="cd-textarea" required></textarea>
+                    </div>
 
-                <div>
-                    <input type="submit" name="send" value="./send contact_form.txt --$CONTACT_REASONS">
-                </div>
-            </fieldset>
-        </form>
-    </main>
+                    <div id="captcha-container">
+                        <label class="cd-label" for="g-recaptcha" id="captcha-label">> are you a robot? Mr. Robot?</label>
+                        <div class="g-recaptcha" id="captcha" data-theme="dark" data-sitekey="6LdiEQwTAAAAAKL5JQ9-H5YCofPf19uzuh-bMHeJ" data-size="normal"></div>
+                    </div>
+
+                    <div id="submit-container">
+                        <input type="submit" name="send" value="./send contact_form.txt --$CONTACT_REASONS">
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
 
     <footer>
         <ul id="social-icons">

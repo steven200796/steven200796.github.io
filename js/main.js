@@ -1,19 +1,17 @@
 jQuery(document).ready(function ($) {
-    $("body").css("display", "none");
 
-    $("body").fadeIn(1500);
-    initSelectedNav();
     $("a.trigger").click(function (event) {
         event.preventDefault();
         linkLocation = $(this).attr("href");;
         console.log(linkLocation);
-        $("body").fadeOut(1500, redirectPage);
+        $("body").fadeOut(1000, redirectPage);
     });
 
     function redirectPage() {
         console.log(linkLocation);
         window.location = linkLocation;
     }
+    initSelectedNav();
 
     //toggle 3d navigation
     $('.cd-3d-nav-trigger').on('click', function () {
@@ -35,7 +33,7 @@ jQuery(document).ready(function ($) {
         if (typeof (addOrRemove) === 'undefined') addOrRemove = true;
         $('.cd-header').toggleClass('nav-is-visible', addOrRemove);
         $('.cd-3d-nav-container').toggleClass('nav-is-visible', addOrRemove);
-        $('main').toggleClass('nav-is-visible', addOrRemove).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
+        $('#content').toggleClass('nav-is-visible', addOrRemove).one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function () {
             //fix marker position when opening the menu (after a window resize)
             addOrRemove && updateSelectedNav();
         });

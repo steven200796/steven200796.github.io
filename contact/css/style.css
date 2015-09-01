@@ -6,12 +6,16 @@ Adjustments
 
 main {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     min-height: 900px;
     background-image: url(/images/backgrounds/contact.jpg);
     background-position: 50% 0;
     background-size: cover;
+}
+
+body {
+    overflow: hidden
 }
 /* --------------------------------
 
@@ -298,6 +302,11 @@ Form
     transition: 1.5s;
 }
 
+#submit-container {
+    position: relative;
+    top: -30px;
+}
+
 .no-touch .cd-form input[type="submit"]:hover {
     background: black;
     -webkit-transition: 2s;
@@ -486,29 +495,28 @@ FLoating labels
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .cd-form input[type="submit"] {
-        float: right;
-        font-size: 3.5vw;
-    }
-    #captcha-container {
-        position: relative;
-    }
-    #captcha-container #captcha-regular {
-        visibility: visible;
-    }
-    #captcha-container #captcha-small {
-        visibility: hidden;
-    }
+.g-recaptcha {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: calc((100% - 304px)/2);
 }
 
-.g-recaptcha {}
-
-#captcha-container #captcha-regular {
-    visibility: hidden;
+#captcha-label {
+    position: relative;
+    text-align: center;
+    left: 0;
+    margin-left: 0;
 }
 
 #captcha-container {
-    position: absolute;
-    top: 55%;
+    position: relative;
+    height: 120px;
+    top: -30px;
+}
+
+@media only screen and (max-width: 600px) {
+    .cd-form input[type="submit"] {
+        font-size: 3.5vw;
+    }
 }

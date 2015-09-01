@@ -1,9 +1,11 @@
 /* ==========================================================================
    Resume Page Style Sheet
    ========================================================================== */
+
 body {
     background-color: grey;
-    overflow-y: auto;
+    overflow-y: hidden;
+    height: 200vh;
 }
 
 main {
