@@ -23,6 +23,10 @@ html {
     font-size: 62.5%;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     font-size: 1.6rem;
     font-family: "Open Sans", sans-serif;
@@ -519,7 +523,38 @@ footer ul li {
     margin: 0 5%;
 }
 
-footer li a {
+footer ul li a {
     display: block;
     text-align: center;
+    height: 50px;
+    width: 50px;
+}
+/* buttons */
+
+footer ul li #github {
+    background-image: url(/images/buttons/github.png);
+}
+
+footer ul li #linkedin {
+    background-image: url(/images/buttons/linkedin.png);
+}
+
+footer ul li #facebook {
+    background-image: url(/images/buttons/facebook.png);
+}
+
+@media only screen and (max-width: 680px) {
+    footer ul li a {
+        height: 40px;
+        width: 40px;
+    }
+    footer ul li #github {
+        background-image: url(/images/buttons/github_small.png);
+    }
+    footer ul li #linkedin {
+        background-image: url(/images/buttons/linkedin_small.png);
+    }
+    footer ul li #facebook {
+        background-image: url(/images/buttons/facebook_small.png);
+    }
 }

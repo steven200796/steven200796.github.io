@@ -8,7 +8,7 @@ main {
 }
 
 main div.image {
-    background-image: url("../images/background_flipped.jpg");
+    background-image: url("");
     background-repeat: no-repeat;
     background-size: contain;
     position: absolute;
