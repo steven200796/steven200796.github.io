@@ -5,59 +5,149 @@
 body {
     overflow-y: hidden;
 }
-/* Main background */
-
+/*Preload Slideshow Images */
+/*
+body:after {
+    display: none;
+    content: url(/images/backgrounds/home/live.jpg) url(/images/backgrounds/home/learn.jpg) url(/images/backgrounds/home/grow.jpg) url(/images/backgrounds/home/experience.jpg) url(/images/backgrounds/home/love.jpg);
+}
+*/
+/* Whole Page Slideshow */
+/*
 main {
     width: 100vw;
     height: 100vh;
-    background-image: url(/images/backgrounds/home_1.jpg);
-    background-position: 50% 50%;
+    background-image: url(/images/backgrounds/home/grow.jpg);
+    background-position: 50% 75%;
     background-size: cover;
 }
-/* Name Styling */
+*/
+/* Background Image Styles */
 
-main #name {
-    font-size: 5em;
-    position: absolute;
-    right: 2vw;
-    top: 2vw;
-    z-index: 1;
-    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(128, 15, 101, 0.2) 80%, rgba(128, 15, 101, 0) 100%);
-    /* ff3.6+ */
-
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(230, 216, 205), color-stop(95%, rgba(128, 15, 101, 0.9))));
-    /* safari4+,chrome */
-
-    background: -webkit-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
-    /* safari5.1+,chrome10+ */
-
-    background: -o-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
-    /* opera 11.10+ */
-
-    background: -ms-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
-    /* ie10+ */
-
-    background: radial-gradient(ellipse at center, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
-    /* w3c */
-
-    background-clip: text;
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#800F65', GradientType=1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* ie6-9 */
+#images div {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
 }
+
+#images .live {
+    background-image: url(/images/backgrounds/home/live.jpg);
+    background-position: 49.5% 100%;
+    background-size: cover;
+}
+
+#images .learn {
+    background-image: url(/images/backgrounds/home/learn.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+#images .grow {
+    background-image: url(/images/backgrounds/home/grow.jpg);
+    background-position: 50% 20%;
+    background-size: cover;
+}
+
+#images .experience {
+    background-image: url(/images/backgrounds/home/experience.jpg);
+    background-position: 50% 30%;
+    background-size: cover;
+}
+
+#images .love {
+    background-image: url(/images/backgrounds/home/love.jpg);
+    background-position: 68% 60%;
+    background-size: cover;
+}
+/* Black and White to Color */
+/*
+body {
+    -moz-animation: toColor ease-in 5s;
+    -webkit-animation: toColor ease-in 5s;
+    animation: toColor ease-in 5s;
+}
+
+@-moz-keyframes toColor {
+    from {
+        filter: grayscale(100%);
+    }
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+@-webkit-keyframes toColor {
+    from {
+        filter: grayscale(100%);
+    }
+    to {
+        filter: grayscale(0%);
+    }
+}
+
+@keyframes toColor {
+    from {
+        filter: grayscale(100%);
+    }
+    to {
+        filter: grayscale(0%);
+    }
+}
+*/
 /* Verbs */
 
-main div.verbs {
-    position: relative;
+#slideshow div#verbs {
+    position: absolute;
     top: 20%;
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    z-index: 1;
 }
 
-main div.verbs span {
+#slideshow div#verbs span {
     font-size: 50px;
     margin: 20px;
+    color: aliceblue;
+}
+
+#slideshow div#verbs .live {
+    color: aliceblue;
+}
+
+#slideshow div#verbs .learn {
+    color: darkslategray;
+}
+
+#slideshow div#verbs .experience {
+    color: black;
+}
+
+#slideshow div#verbs .grow {
+    color: #4a2003;
+}
+
+#slideshow div#verbs .love {
+    color: #49e3ff;
+}
+/* Slideshow Styles */
+
+#images {
+    width: 100vw;
+    height: 100vh;
+}
+
+#images > div {
+    position: absolute;
+}
+/* Photo Credit */
+
+#credit {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+}
+
+#credit a {
     color: aliceblue;
 }

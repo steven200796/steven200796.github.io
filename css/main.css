@@ -68,10 +68,6 @@ body {
     display: none;
 }
 */
-
-.cd-logo {
-    display: none;
-}
 /* --------------------------------
 
 Main Components
@@ -86,8 +82,7 @@ a.cd-3d-nav-trigger:hover {
 .cd-header {
     position: fixed;
     height: 80px;
-    width: 90%;
-    left: 5%;
+    width: 100%;
     margin: 0 auto;
     -webkit-transition: -webkit-transform 0.5s;
     -moz-transition: -moz-transform 0.5s;
@@ -475,6 +470,59 @@ a.cd-3d-nav-trigger:hover {
 
 .color-5 {
     color: #77cd91;
+}
+/* Name Logo Home Link */
+
+#name {
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    height: auto;
+    width: auto;
+    font-size: 4.5em;
+    color: black;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    transition: transform 1s;
+}
+
+@media only screen and (max-width: 680px) {
+    #name {
+        font-size: 3.5em;
+        -webkit-transition: -webkit-transform 0.5s;
+        -moz-transition: -moz-transform 0.5s;
+        transition: transform 0.5s;
+    }
+}
+
+#name:hover {
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 1) 0%, rgba(128, 15, 101, 0.2) 80%, rgba(128, 15, 101, 0) 100%);
+    /* ff3.6+ */
+
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgb(230, 216, 205), color-stop(95%, rgba(128, 15, 101, 0.9))));
+    /* safari4+,chrome */
+
+    background: -webkit-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* safari5.1+,chrome10+ */
+
+    background: -o-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* opera 11.10+ */
+
+    background: -ms-radial-gradient(center, ellipse cover, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* ie10+ */
+
+    background: radial-gradient(ellipse at center, rgb(230, 216, 205) 0%, rgba(128, 15, 101, 0.9) 95%);
+    /* w3c */
+
+    background-clip: text;
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#800F65', GradientType=1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* ie6-9 */
+
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    transition: background 1s;
 }
 
 #content {
