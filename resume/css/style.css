@@ -3,52 +3,84 @@
    ========================================================================== */
 
 body {
-    background-color: grey;
-    overflow-y: hidden;
-    height: 200vh;
+    overflow: hidden;
 }
 
-main {
-    padding: 0;
-    height: 100%;
+iframe {
+    padding: 0 8.2vw 3.25vw 8.2vw;
+    margin: 0;
+    border: 0;
+    display: block;
+    background-color: transparent;
+}
+
+#content {
+    height: 100vh;
+    display: block;
+    overflow: auto;
+    background-image: url(/images/backgrounds/cv/wide.jpg);
+    background-position: 50% 100%;
+    background-size: cover;
 }
 
 #cv {
-    display: table;
+    display: block;
     position: absolute;
+    height: auto;
     width: 100%;
-    table-layout: fixed;
-    top: 60px;
+    top: 70px;
 }
 
 #cv div {
     font-family: 'Stalemate', cursive;
-    height: 64vw;
+    height: 62vw;
     width: 50%;
     display: inline-block;
     text-align: center;
     height: max-height: -moz-calc(100vh - 190px);
     max-height: -webkit-calc(100vh - 190px);
     max-height: calc(100vh - 190px);
+    float: left;
 }
 
 #cv a {
     font-size: 50px;
+    color: lightyellow;
+}
+/* Photo Credits */
+
+#credit {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
 }
 
-@media screen and (max-width: 960px) {
+#credit a {
+    color: aliceblue;
+}
+
+@media screen and (max-width: 1280px) {
     #cv {
         top: 80px;
-        overflow-y: scroll;
+        overflow-y: visible;
     }
     #cv div {
-        padding: 0 40px;
+        padding: 0 6vw;
         margin-bottom: 11vh;
         display: block;
         height: 128vw;
         width: 100%;
     }
-    ::-webkit-scrollbar {
-        display: clear;
+    #credit {
+        right: 30px;
     }
-}
+    @media screen and (max-aspect-ratio: 1/1) {
+        #content {
+            background-image: url(/images/backgrounds/cv/tall.jpg);
+            background-position: 50% 0%;
+        }
+        #cv a {
+            color: darkblue;
+        }
+    }
+    /* Photo Credit */

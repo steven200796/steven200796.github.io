@@ -32,7 +32,7 @@ main {
 
 #images .live {
     background-image: url(/images/backgrounds/home/live.jpg);
-    background-position: 49.5% 100%;
+    background-position: 50% 100%;
     background-size: cover;
 }
 
@@ -98,7 +98,7 @@ body {
 
 #slideshow div#verbs {
     position: absolute;
-    top: 20%;
+    top: 15%;
     width: 100%;
     text-align: center;
     margin: 0 auto;

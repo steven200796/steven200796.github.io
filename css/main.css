@@ -259,7 +259,7 @@ a.cd-3d-nav-trigger:hover {
 
     position: relative;
     height: 100%;
-    background-color: transparent;
+    background-color: #33364b;
     /* Force Hardware Acceleration */
 
     -webkit-transform: translateZ(0);
@@ -308,23 +308,23 @@ a.cd-3d-nav-trigger:hover {
 }
 
 .cd-3d-nav li:first-of-type a::before {
-    background-image: url(/img/icon-1.svg);
+    background-image: url(/img/svg/eye%20_color.svg);
 }
 
 .cd-3d-nav li:nth-of-type(2) a::before {
-    background-image: url(/img/icon-2.svg);
+    background-image: url(/img/svg/toolbox_color.svg);
 }
 
 .cd-3d-nav li:nth-of-type(3) a::before {
-    background-image: url(/img/icon-3.svg);
+    background-image: url(/img/svg/canvas%20_color.svg);
 }
 
 .cd-3d-nav li:nth-of-type(4) a::before {
-    background-image: url(/img/icon-5.svg);
+    background-image: url(/img/svg/write%20_color.svg);
 }
 
 .cd-3d-nav li:nth-of-type(5) a::before {
-    background-image: url(/img/icon-4.svg);
+    background-image: url(/img/svg/mail%20_color.svg);
 }
 
 .cd-3d-nav a {
@@ -356,7 +356,7 @@ a.cd-3d-nav-trigger:hover {
     top: 40%;
     bottom: auto;
     right: auto;
-    background-size: 32px 64px;
+    background-size: 32px 32px;
     background-repeat: no-repeat;
     background-position: 0 0;
     -webkit-transform: translateX(-50%);
@@ -376,10 +376,6 @@ a.cd-3d-nav-trigger:hover {
 
 .no-touch .cd-3d-nav .cd-selected a:hover {
     background-color: #212635;
-}
-
-.cd-3d-nav .cd-selected a::before {
-    background-position: 0 -32px;
 }
 
 .nav-is-visible .cd-3d-nav {
@@ -559,16 +555,14 @@ footer {
 }
 
 footer ul {
-    list-style: none;
     margin: 0 auto;
     width: 300px;
 }
 
 footer ul li {
     float: left;
-    width: 23.3%;
-    padding: 0 5px;
-    margin: 0 5%;
+    width: 50px;
+    margin: 0 8.3%;
 }
 
 footer ul li a {
