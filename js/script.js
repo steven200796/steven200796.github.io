@@ -4,7 +4,7 @@
 
             /* Init values 6000 and 1000 */
             var cycleTime = 6000;
-            var fadeTime = 1000;
+            var fadeTime = 1500;
 
             function cycleWords() {
                 $('#verbs > span:first')

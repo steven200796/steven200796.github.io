@@ -31,31 +31,31 @@ main {
 }
 
 #images .live {
-    background-image: url(/images/backgrounds/home/live.jpg);
+    background-image: url(/images/backgrounds/home/live-min.jpg);
     background-position: 50% 100%;
     background-size: cover;
 }
 
 #images .learn {
-    background-image: url(/images/backgrounds/home/learn.jpg);
+    background-image: url(/images/backgrounds/home/learn-min.jpg);
     background-position: 50% 0;
     background-size: cover;
 }
 
 #images .grow {
-    background-image: url(/images/backgrounds/home/grow.jpg);
+    background-image: url(/images/backgrounds/home/grow-min.jpg);
     background-position: 50% 20%;
     background-size: cover;
 }
 
 #images .experience {
-    background-image: url(/images/backgrounds/home/experience.jpg);
+    background-image: url(/images/backgrounds/home/experience-min.jpg);
     background-position: 50% 30%;
     background-size: cover;
 }
 
 #images .love {
-    background-image: url(/images/backgrounds/home/love.jpg);
+    background-image: url(/images/backgrounds/home/love-min.jpg);
     background-position: 68% 60%;
     background-size: cover;
 }
