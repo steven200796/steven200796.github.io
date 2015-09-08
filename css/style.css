@@ -6,22 +6,11 @@ body {
     overflow-y: hidden;
 }
 /*Preload Slideshow Images */
-/*
+
 body:after {
     display: none;
-    content: url(/images/backgrounds/home/live.jpg) url(/images/backgrounds/home/learn.jpg) url(/images/backgrounds/home/grow.jpg) url(/images/backgrounds/home/experience.jpg) url(/images/backgrounds/home/love.jpg);
+    content: url(/images/backgrounds/home/live-min.jpg) url(/images/backgrounds/home/learn-min.jpg) url(/images/backgrounds/home/grow-min.jpg) url(/images/backgrounds/home/experience-min.jpg) url(/images/backgrounds/home/love-min.jpg);
 }
-*/
-/* Whole Page Slideshow */
-/*
-main {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/images/backgrounds/home/grow.jpg);
-    background-position: 50% 75%;
-    background-size: cover;
-}
-*/
 /* Background Image Styles */
 
 #images div {
