@@ -1,0 +1,10 @@
+html {
+    background-color: aliceblue;
+}
+
+#content {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 10%;
+}

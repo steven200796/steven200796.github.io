@@ -1,8 +1,13 @@
 /* Main Style */
 
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
 #content {
-    padding-top: 80px;
-    background-color: skyblue;
+    padding-top: 150px;
+    background-color: aliceblue;
     height: 100%;
 }
 
